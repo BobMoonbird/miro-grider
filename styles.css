@@ -1,0 +1,95 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.scrollable-container {
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.scrollable-content {
+    background-color: white;
+}
+
+.single-section, h1, h3, button {
+    margin: 10px 10px;
+}
+
+.intro {
+    font-size: 14px;
+    margin-top: 15px;
+    padding-left: 20px;
+    margin-left: 10px;
+}
+
+.grid-preview {
+    margin-left: 10px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.grider-area-input {
+    width: 150px;
+}
+
+.advanced-toggle {
+    width: 270px;
+    display: block;
+    position: relative;
+    text-decoration: none;
+    background: #F5F5F7;
+    padding: 5px 10px;
+    margin-right: 10px;
+    border-radius: 4px;
+    color: #050038;
+}
+
+.advanced-toggle.is-open:after {
+    content: "▼";
+    position: absolute;
+    right: 10px;
+}
+
+.advanced-toggle:not(.is-open):after {
+    content: "◄";
+    position: absolute;
+    right: 10px;
+}
+
+.advanced-section {
+    display: flex;
+    margin: 0 20px;
+}
+
+.advanced-section-line {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.widget-type-icons {
+    display: flex;
+    justify-content: space-around;
+}
+
+.widget-type-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+.widget-type-icon svg {
+    width: 36px;
+    height: 36px;
+}
+
+.widget-type-icon.is-selected {
+    background: #F0F0F3;
+}

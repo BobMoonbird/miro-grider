@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="https://miro.com/app/static/styles.1.0.css"/>
+    <link rel="stylesheet" type="text/css" href="styles.css"/>
+    <script type="text/javascript" src="https://miro.com/app/static/sdk.1.1.js"></script>
+    <script type="text/javascript" src="grider.js"></script>
+</head>
+<body>
+<div class="scrollable-container">
+    <div class="scrollable-content">
+
+        <ol class="intro">
+            <li>Create your grid (by clicking on the preview)</li>
+            <li>Drag & drop it onto the board</li>
+        </ol>
+
+        <div class="grid-container">
+        <canvas class="grid-preview js-grid-preview" width="300" height="300"
+                data-image-url="data:image/gif;base64,R0lGODlhEAAQAMQAAORHHOVSKudfOulrSOp3WOyDZu6QdvCchPGolfO0o/XBs/fNwfjZ0frl3/zy7////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAkAABAALAAAAAAQABAAAAVVICSOZGlCQAosJ6mu7fiyZeKqNKToQGDsM8hBADgUXoGAiqhSvp5QAnQKGIgUhwFUYLCVDFCrKUE1lBavAViFIDlTImbKC5Gm2hB0SlBCBMQiB0UjIQA7"></canvas>
+        </div>
+
+        <div class="single-section hint">
+            (Tip: use shift+click to toggle single item)
+        </div>
+
+
+        <div class="single-section">
+            <a href="javascript:;" class="js-advanced-toggle advanced-toggle">
+                <span>Advanced</span>
+            </a>
+        </div>
+        <div class="js-advanced-section advanced-section" style="display:none;">
+            <!-- Margin -->
+            <div class="advanced-section-line">
+                <div class="advanced-option-title">
+                    Margin
+                </div>
+                <div class="advanced-option-input">
+                    <input class="miro-input miro-input--primary miro-input--small js-margin grider-area-input"
+                           placeholder="Margin"
+                           value="10"/>
+                </div>
+            </div>
+
+            <!-- Size -->
+            <div class="advanced-section-line">
+                <div class="advanced-option-title">
+                    Size
+                </div>
+                <div class="advanced-option-input">
+                    <input class="miro-input miro-input--primary miro-input--small js-size grider-area-input"
+                           placeholder="Size"
+                           value="50"/>
+                </div>
+            </div>
+
+            <!-- Type -->
+            <div class="advanced-section-line">
+                <div class="advanced-option-title">
+                    Widget type
+                </div>
+                <div class="widget-type-icons grider-area-input">
+                    <div class="js-widget-type widget-type-icon is-selected" data-value="shape">
+                        <svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" d="M3 3h18v18H3z"></path></svg>
+                        <div>Shape</div>
+                    </div>
+                    <div class="js-widget-type widget-type-icon" data-value="sticker">
+                        <svg viewBox="0 0 24 24"><path fill="currentColor" d="M4 4v16h9v-5a2 2 0 0 1 2-2h5V4H4zm0-2h16a2 2 0 0 1 2 2v10.172a2 2 0 0 1-.586 1.414l-5.828 5.828a2 2 0 0 1-1.414.586H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z"></path></svg>
+                        <div>Sticky note</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Content -->
+            <div class="advanced-section-line">
+                <div class="advanced-option-title">
+                    Default content
+                </div>
+                <select class="miro-select miro-select--secondary-bordered miro-select--small js-content grider-area-input">
+                    <option value="empty">Empty</option>
+                    <option value="numbers">Numbers</option>
+                </select>
+            </div>
+        </div>
+        <button class="miro-btn miro-btn--primary js-insert">Create</button>
+    </div>
+</div>
+
+</body>
+</html>
