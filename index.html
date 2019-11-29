@@ -1,36 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <script type="text/javascript" src="https://miro.com/app/static/sdk.1.1.js"></script>
-  <script type="text/javascript">
+    <script type="text/javascript" src="https://miro.com/app/static/sdk.1.1.js"></script>
+    <script type="text/javascript">
 
-      const sidebarAddress = '/sidebar.html';
+        const sidebarAddress = '/sidebar.html';
 
-      const icon = '<svg viewBox="0 0 12 12" version="1.1" xmlns="http://www.w3.org/2000/svg">\n'
-      + '    <g id="icon-24" stroke="currentColor" stroke-width="0.5" fill="none" fill-rule="evenodd">\n'
-      + '        <rect x="2" y="2" width="3" height="3" />\n'
-      + '        <rect x="7" y="2" width="3" height="3" />\n'
-      + '        <rect x="2" y="7" width="3" height="3" />\n'
-      + '        <rect x="7" y="7" width="3" height="3" />\n'
-      + '    </g>\n'
-      + '</svg>';
+        const icon = '<svg viewBox="0 0 12 12" version="1.1" xmlns="http://www.w3.org/2000/svg">\n'
+            + '    <g id="icon-24" stroke="currentColor" stroke-width="0.5" fill="none" fill-rule="evenodd">\n'
+            + '        <rect x="2" y="2" width="3" height="3" />\n'
+            + '        <circle cx="8.5" cy="3.5" r="1.5" stroke-width="0.7" />\n'
+            + '        <polygon points="3.5,7.5 2,10 5,10" stroke-width="0.7" />\n'
+            + '        <rect x="7" y="7" width="3" height="3" />\n'
+            + '    </g>\n'
+            + '</svg>';
 
-      miro.onReady(() => {
-          miro.initialize({
-              extensionPoints: {
-                  toolbar: {
-                      title: 'Grider',
-                      toolbarSvgIcon: icon,
-                      librarySvgIcon: icon,
-                      onClick: openLibrary
-                  }
-              }
-          });
-      });
+        miro.onReady(() => {
+            miro.initialize({
+                extensionPoints: {
+                    toolbar: {
+                        title: 'Grider',
+                        toolbarSvgIcon: icon,
+                        librarySvgIcon: icon,
+                        onClick: openLibrary
+                    }
+                }
+            });
+        });
 
-      function openLibrary() {
-          miro.board.ui.openLibrary(sidebarAddress, {title: 'Grid'});
-      }
-  </script>
+        function openLibrary() {
+            miro.board.ui.openLibrary(sidebarAddress, {title: 'Grid'});
+        }
+    </script>
 </head>
 </html>
