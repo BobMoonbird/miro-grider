@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" type="text/css" href="https://miro.com/app/static/styles.1.0.css"/>
+    <script type="text/javascript" src="https://miro.com/app/static/sdk.1.1.js"></script>
 </head>
 <body>
 <div style="width: 100%; height: 100%; display: flex;">
@@ -24,5 +25,10 @@
         </p>
     </div>
 </div>
+<script>
+    if(window.opener) {
+        window.opener.miroAuthorized()
+    }
+</script>
 </body>
 </html>
