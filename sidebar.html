@@ -5,8 +5,6 @@
     <title></title>
     <link rel="stylesheet" type="text/css" href="https://miro.com/app/static/styles.1.0.css"/>
     <link rel="stylesheet" type="text/css" href="styles.css"/>
-    <script type="text/javascript" src="https://miro.com/app/static/sdk.1.1.js"></script>
-    <script type="text/javascript" src="grider.js"></script>
 </head>
 <body>
 <div class="scrollable-container">
@@ -88,6 +86,8 @@
         <button class="miro-btn miro-btn--primary js-insert">Create</button>
     </div>
 </div>
-
+<!-- We'll load JS at the end, because we need to start after the DOM is loaded -->
+<script type="text/javascript" src="https://miro.com/app/static/sdk.1.1.js"></script>
+<script type="text/javascript" src="grider.js"></script>
 </body>
 </html>
