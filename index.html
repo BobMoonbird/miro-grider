@@ -37,13 +37,12 @@
                 openLibrary();
             } else {
                 miro.board.ui.openModal('not-authorized.html')
-                    .then(async response => {
+                    .then(response => {
                         if (response === 'success') {
-                            await opener(attribute);
+                            openLibrary();
                         }
                     })
             }
-            openLibrary();
         }
     </script>
 </head>
